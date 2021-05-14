@@ -38,7 +38,7 @@ public class CoronaDB {
 		try{
 			while(true){
 				// parsing할 url 지정(API 키 포함해서)
-				String url = "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=O13KCp8nuEYRIX7pHWv3%2BxEif8ny6kbUqRuJyZspC9sw320dLtjVTyp2QuUFqiLnNzfWZjP0w42wBQec0CH5Hw%3D%3D&pageNo=1&numOfRows=10&startCreateDt="+Date+"&endCreateDt="+Date;
+				String url = "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=<API KEY>&pageNo=1&numOfRows=10&startCreateDt="+Date+"&endCreateDt="+Date;
 				
 				DocumentBuilderFactory dbFactoty = DocumentBuilderFactory.newInstance();
 				DocumentBuilder dBuilder = dbFactoty.newDocumentBuilder();
@@ -91,9 +91,9 @@ public class CoronaDB {
 		try {
 		Connection conn = null;
 		
-		String url 		= "jdbc:mysql://152.67.192.35:3306/jspDB?useUnicode=true&allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC";
-		String user 	= "admin";
-		String password = "lmyykr25";
+		String url 		= "jdbc:mysql://<IP주소>:<PORT/<DB Table>?useUnicode=true&allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC";
+		String user 	= "<ID>";
+		String password = "<PW>";
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		conn = DriverManager.getConnection(url, user, password);
