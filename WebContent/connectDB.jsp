@@ -10,9 +10,9 @@
 <%
 	Connection conn = null;
 	
-	String url 		= "jdbc:mysql://localhost:3306/jspDB?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC";
-	String user 	= "root";
-	String password = "1234";
+	String url 		= "jdbc:mysql://<IP주소>:<PW>/<DB Table>?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC";
+	String user 	= "<ID>";
+	String password = "<PW>";
 	
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	conn = DriverManager.getConnection(url, user, password);
